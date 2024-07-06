@@ -9,7 +9,7 @@ frontend:
         - ./dotnet8/dotnet --version
     build:
       commands:
-        - ./dotnet8/dotnet publish -c Release -o release
+        - ./dotnet8/dotnet publish -c Release -o release --runtime linux-x64
   artifacts:
     baseDirectory: /release/wwwroot
     files:
