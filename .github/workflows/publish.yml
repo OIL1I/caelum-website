@@ -16,7 +16,7 @@ jobs:
 
         # Generate the website
         - name: Publish
-          run: dotnet publish CaelumWebsite\\CaelumWebsite.csproj --configuration Release
+          run: dotnet publish CaelumWebsite\\CaelumWebsite.csproj --configuration Release -o release
 
         # Publish the website
         - name: GitHub Pages action
@@ -25,7 +25,7 @@ jobs:
           with:
             github_token: ${{ secrets.PUBLISH_TOKEN }}
             publish_branch: gh-pages
-            publish_dir: bin/Release/netstandard2.1/publish/wwwroot
+            publish_dir: release/wwwroot
             allow_empty_commit: false
             keep_files: false
             force_orphan: true
