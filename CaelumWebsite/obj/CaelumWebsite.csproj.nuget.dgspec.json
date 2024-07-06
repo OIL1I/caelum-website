@@ -1,0 +1,70 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\CaelumWebsite.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\CaelumWebsite.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\CaelumWebsite.csproj",
+        "projectName": "CaelumWebsite",
+        "projectPath": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\CaelumWebsite.csproj",
+        "packagesPath": "C:\\Users\\Olivier\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Olivier\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

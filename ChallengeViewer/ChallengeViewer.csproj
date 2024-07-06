@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+        <ApplicationIcon>Resources\Logo.ico</ApplicationIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Page Update="View\Start.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Test.json">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Resources\BackArrow.png" />
+      <Resource Include="Resources\BackArrow.png" />
+      <None Remove="Resources\Reload.png" />
+      <Resource Include="Resources\Reload.png" />
+      <None Remove="Resources\Refresh.png" />
+      <Resource Include="Resources\Refresh.png" />
+      <None Remove="Resources\Back.png" />
+      <Resource Include="Resources\Back.png" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\CaelumWebsite.bundle.scp.css",
+      "PackagePath": "staticwebassets\\CaelumWebsite.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\Images\\Logo.png",
+      "PackagePath": "staticwebassets\\Images\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\Images\\pexels-wildshots-19982636.jpg",
+      "PackagePath": "staticwebassets\\Images\\pexels-wildshots-19982636.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Olivier\\RiderProjects\\CaelumWebsite\\CaelumWebsite\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.CaelumWebsite.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.CaelumWebsite.props",
+      "PackagePath": "build\\CaelumWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.CaelumWebsite.props",
+      "PackagePath": "buildMultiTargeting\\CaelumWebsite.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.CaelumWebsite.props",
+      "PackagePath": "buildTransitive\\CaelumWebsite.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

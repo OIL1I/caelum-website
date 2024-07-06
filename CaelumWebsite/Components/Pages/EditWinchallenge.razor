@@ -1,0 +1,105 @@
+﻿@page "/winchallenge/{Id:int}/edit"
+@using CaelumWebsite.Components.Models
+@inject NavigationManager NavigationManager
+@rendermode InteractiveServer
+
+<div>
+    <a href="winchallenge/@Id">@($"<- Back to the Overwiev")</a>
+    <h3>@_winchlng.Name</h3>
+    <label>Status: @_winchlng.Status.ToString()</label>
+    <button type="button" @onclick="PauseResumeButtonOnclick">@_pauseResumeButtonValue</button>
+
+    <ul>
+        @foreach (var chlng in _winchlng.Challenges)
+        {
+            <li>
+                <h5>@chlng.Name</h5>
+                <label>Completions:</label>
+                <input type="number" min="0" @bind="@chlng.Completions"/>
+                @if (!chlng.IsDone)
+                {
+                    @foreach (var part in _winchlng.Participants)
+                    {
+                        <input type="checkbox" value="@(chlng.DoneBy.Exists(x=> x == part))" @onchange="e => OnParticipantCheckboxChange(chlng, part, e)"/>
+                        <label>@part.Name</label>
+                    }
+
+                    <button type="button" @onclick="() => MarkAsDone(chlng)">Mark as Done</button>
+                }
+                else
+                {
+                    <ul>
+                        @foreach (var part in chlng.DoneBy)
+                        {
+                            <li>@part.Name</li>
+                        }
+                    </ul>
+                    <button type="button" @onclick="() => MarkAsUndone(chlng)">Mark as Undone</button>
+                }
+            </li>
+        }
+    </ul>
+    <button type="button" @onclick="ShareChallenge">@_shareChallengeButtonValue</button>
+    @if (_winchlng.IsShared)
+    {
+        <p>@_winchlng.ShareCode</p>
+    }
+    <button type="button" @onclick="DeleteChallenge">Delete Challenge</button>
+    <a href="winchallenge/@Id">@($"<- Back to the Overwiev")</a>
+</div>
+
+@code {
+    [Parameter] public int Id { get; set; }
+    private Models.Winchallenge _winchlng;
+    private string _pauseResumeButtonValue;
+    private string _shareChallengeButtonValue;
+
+    private void PauseResumeButtonOnclick()
+    {
+        _winchlng.Status = _winchlng.Status == Models.ChallengeState.Running ? Models.ChallengeState.Paused : Models.ChallengeState.Running;
+        _pauseResumeButtonValue = _winchlng.Status == Models.ChallengeState.Running ? "Pause" : "Resume";
+    }
+
+    private void MarkAsDone(Models.Challenge pChlng)
+    {
+        pChlng.Completions = pChlng.RequiredCompletions;
+    }
+
+    private void MarkAsUndone(Models.Challenge pChlng)
+    {
+        pChlng.Completions = 0;
+        pChlng.DoneBy = new List<Models.Participant>();
+    }
+
+    private void OnParticipantCheckboxChange(Models.Challenge pChlng, Models.Participant pPart, ChangeEventArgs e)
+    {
+        if ((bool)e.Value)
+        {
+            pChlng.DoneBy.Add(pPart);
+        }
+        else
+        {
+            pChlng.DoneBy.Remove(pPart);
+        }
+    }
+
+    private void DeleteChallenge()
+    {
+        AppData.GetWinchallenges().Remove(_winchlng);
+        NavigationManager.NavigateTo("/winchallenge");
+    }
+
+    private void ShareChallenge()
+    {
+        _winchlng.IsShared = !_winchlng.IsShared;
+        _shareChallengeButtonValue = _winchlng.IsShared ? "Stop sharing" : "Start sharing";
+    }
+    
+    protected override void OnInitialized()
+    {
+        _winchlng = AppData.GetWinchallenges().Find(x => x.Id == Id);
+        _pauseResumeButtonValue = _winchlng.Status == Models.ChallengeState.Running ? "Pause" : "Resume";
+        _shareChallengeButtonValue = _winchlng.IsShared ? "Stop sharing" : "Start sharing";
+    }
+
+}

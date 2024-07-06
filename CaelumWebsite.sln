@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaelumWebsite", "CaelumWebsite\CaelumWebsite.csproj", "{80751C50-6BBF-4D12-93C5-79FC43B2C718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChallengeViewer", "ChallengeViewer\ChallengeViewer.csproj", "{53F1CD3A-14F3-496C-89D3-AEBBC0CEAB87}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80751C50-6BBF-4D12-93C5-79FC43B2C718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80751C50-6BBF-4D12-93C5-79FC43B2C718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80751C50-6BBF-4D12-93C5-79FC43B2C718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80751C50-6BBF-4D12-93C5-79FC43B2C718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F1CD3A-14F3-496C-89D3-AEBBC0CEAB87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F1CD3A-14F3-496C-89D3-AEBBC0CEAB87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F1CD3A-14F3-496C-89D3-AEBBC0CEAB87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F1CD3A-14F3-496C-89D3-AEBBC0CEAB87}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

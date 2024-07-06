@@ -1,0 +1,86 @@
+﻿@page "/winchallenge/{Id:int?}"
+@using System.Linq
+@using System.Linq.Expressions
+
+@if (_isOverwiev)
+{
+    <div>
+        <div>
+            <label>Alle Winchallenges:</label>
+            @foreach (var wchlng in _winchallenges)
+            {
+                <div>
+                    <a href="/winchallenge/@wchlng.Id">
+                        <label>@wchlng.Name</label>
+                        <label>@wchlng.Status.ToString()</label>
+                        <label>@wchlng.CreationDate.ToShortDateString()</label>
+                    </a>
+                </div>
+            }
+        </div>
+        <div>
+            <a href="Winchallenge/Create">Create a new Winchallenge</a>
+        </div>
+    </div>
+}
+else
+{
+    <div>
+        <a href="/winchallenge">@("<- Zurück zu allen Challenges")</a>
+        <a href="/winchallenge/@Id/edit">Challenge bearbeiten</a>
+        <h3>@_winchlng.Name</h3>
+        <p>@_winchlng.Status.ToString()</p>
+        <p>@_winchlng.CreationDate</p>
+
+        <label>Liste der Mitglieder:</label>
+        <ul>
+            @foreach (var part in _winchlng.Participants)
+            {
+                <li>@part.Name</li>
+            }
+        </ul>
+        <label>Liste der Challenges: </label>
+        <ul>
+            @foreach (var chlng in _winchlng.Challenges)
+            {
+                <li>
+                    @if (!chlng.IsBackToBack)
+                    {
+                        <p class="@(chlng.IsDone ? "line-through" : "")">@($"{chlng.Name} ({chlng.Completions}/{chlng.RequiredCompletions})")</p>
+                    }
+                    else
+                    {
+                        <p class="@(chlng.IsDone ? "line-through" : "")">@($"{chlng.Name} B{chlng.RequiredCompletions}B ({chlng.Completions}/{chlng.RequiredCompletions})")</p>
+                    }
+                    @if (chlng.IsDone)
+                    {
+                        <label>Abgeschlossen von:</label>
+                        @foreach (var part in chlng.DoneBy)
+                        {
+                            <p>@part.Name</p>
+                        }
+                    }
+                </li>
+            }
+        </ul>
+    </div>
+}
+
+
+@code {
+    [Parameter] public int? Id { get; set; }
+    private bool _isOverwiev;
+    private List<Models.Winchallenge> _winchallenges = AppData.GetWinchallenges();
+    private Models.Winchallenge _winchlng;
+
+    protected override void OnParametersSet()
+    {
+        _isOverwiev = Id == null;
+
+        if (!_isOverwiev)
+        {
+            _winchlng = _winchallenges.Find(x => x.Id == this.Id);
+        }
+    }
+
+}

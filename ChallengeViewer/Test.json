@@ -1,0 +1,51 @@
+{
+  "Id": 0,
+  "Name": "Winchallenge 0",
+  "CreationDate": "2024-06-07T13:32:20.0533414+02:00",
+  "Status": 0,
+  "Challenges": [
+    {
+      "Id": 0,
+      "Name": "Challenge0",
+      "IsBackToBack": false,
+      "RequiredCompletions": 1,
+      "Completions": 0,
+      "IsDone": false,
+      "DoneBy": []
+    },
+    {
+      "Id": 1,
+      "Name": "Challenge1",
+      "IsBackToBack": false,
+      "RequiredCompletions": 3,
+      "Completions": 0,
+      "IsDone": false,
+      "DoneBy": []
+    },
+    {
+      "Id": 2,
+      "Name": "Challenge2",
+      "IsBackToBack": true,
+      "RequiredCompletions": 2,
+      "Completions": 0,
+      "IsDone": false,
+      "DoneBy": []
+    }
+  ],
+  "Participants": [
+    {
+      "Id": 0,
+      "Name": "Name0"
+    },
+    {
+      "Id": 1,
+      "Name": "Name1"
+    },
+    {
+      "Id": 2,
+      "Name": "Name2"
+    }
+  ],
+  "ShareCode": "TLkVYGKb",
+  "IsShared": true
+}

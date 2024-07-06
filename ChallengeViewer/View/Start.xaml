@@ -1,0 +1,15 @@
+﻿<Window x:Class="ChallengeViewer.View.Start"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:ChallengeViewer.View"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="250" ShowInTaskbar="True" ResizeMode="NoResize">
+    <Grid>
+        <Label Height="50" Width="250" VerticalAlignment="Top" Margin="25" Padding="12 5" FontSize="16" FontFamily="Arial">Gib den Share-Code ein:</Label>
+        <TextBox x:Name="TxtboxSharecode" Height="50" VerticalAlignment="Top" Margin="10 85" Background="DarkGray" Foreground="Black" MaxLength="8" FontSize="35" HorizontalContentAlignment="Center"></TextBox>
+        <Button x:Name="BtnConnect" Height="50" Width="150" VerticalAlignment="Top" Margin="0 185 0 0" Click="BtnConnect_OnClick">Verbinden</Button>
+        <Label x:Name="LblNoChallengeFound" Foreground="Red" Margin="16 140 0 0" FontStyle="Normal" FontSize="11" Visibility="Hidden">Keine Challenge mit diesem Code gefunden</Label>
+    </Grid>
+</Window>

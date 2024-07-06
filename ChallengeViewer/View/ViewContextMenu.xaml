@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="ChallengeViewer.View.ViewContextMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:ChallengeViewer.View"
+             mc:Ignorable="d"
+             d:DesignHeight="100" d:DesignWidth="150">
+    <Grid>
+        <StackPanel>
+            <Button Name="BtnUpdate" Content="Update" Click="BtnUpdate_OnClick"/>
+            <Label>Deckkraft:</Label>
+            <Slider Name="SliderOpacity" Minimum="0.0" Maximum="1.0" IsSnapToTickEnabled="True" 
+                    Value="0.3" ValueChanged="SliderOpacity_OnValueChanged"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

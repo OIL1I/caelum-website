@@ -1,0 +1,58 @@
+﻿/* Winchallenge.razor.css */
+
+body {
+    color: #000;
+    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    background-image: url("./Images/pexels-wildshots-19982636.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+div {
+    margin: 1em;
+}
+
+label {
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+}
+
+a {
+    font-size: 1.2em;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+p {
+    font-size: 1.1em;
+    color: #000;
+}
+
+h3 {
+    font-size: 2em;
+    color: #000;
+    font-weight: bold;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #fff;
+}
