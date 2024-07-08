@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CaelumWebsite")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79766764e67460f565ee00756ce7b214f66e851e")]
 [assembly: System.Reflection.AssemblyProductAttribute("CaelumWebsite")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CaelumWebsite")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

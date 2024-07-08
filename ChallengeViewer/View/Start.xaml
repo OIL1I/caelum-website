@@ -11,5 +11,6 @@
         <TextBox x:Name="TxtboxSharecode" Height="50" VerticalAlignment="Top" Margin="10 85" Background="DarkGray" Foreground="Black" MaxLength="8" FontSize="35" HorizontalContentAlignment="Center"></TextBox>
         <Button x:Name="BtnConnect" Height="50" Width="150" VerticalAlignment="Top" Margin="0 185 0 0" Click="BtnConnect_OnClick">Verbinden</Button>
         <Label x:Name="LblNoChallengeFound" Foreground="Red" Margin="16 140 0 0" FontStyle="Normal" FontSize="11" Visibility="Hidden">Keine Challenge mit diesem Code gefunden</Label>
+        <Label x:Name="LblVersionNr" Content="v.0.3.1.0" Foreground="DimGray" VerticalAlignment="Bottom" HorizontalAlignment="Right" ></Label>
     </Grid>
 </Window>

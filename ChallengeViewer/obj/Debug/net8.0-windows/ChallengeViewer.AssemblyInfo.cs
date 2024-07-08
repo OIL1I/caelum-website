@@ -10,13 +10,13 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ChallengeViewer")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("OIL1I")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.3.2.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79766764e67460f565ee00756ce7b214f66e851e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ChallengeViewer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ChallengeViewer")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.3.2.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
 

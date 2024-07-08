@@ -68,7 +68,7 @@ namespace ChallengeViewer.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ChallengeViewer;component/view/viewcontextmenu.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ChallengeViewer;V0.3.2.0;component/view/viewcontextmenu.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\ViewContextMenu.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
