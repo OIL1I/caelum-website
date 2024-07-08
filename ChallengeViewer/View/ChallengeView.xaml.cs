@@ -26,18 +26,19 @@ public partial class ChallengeView : Window
         this.MouseLeftButtonDown += (_, _) => this.DragMove();
         
         //ContextMenu
-        // Create new context menu
         var contextMenu = new ContextMenu();
-
-        // Create menu item to host the user control
         var menuItem = new MenuItem();
+        menuItem.Header = "Refresh";
+        menuItem.Style = this.FindResource("NoHighlightMenuItem") as Style;
+        menuItem.Width = 100;
         contextMenu.Items.Add(menuItem);
 
-        // Create and assign the user control to the menu item
-        ViewContextMenu viewContextMenu = new ViewContextMenu(this);
+        menuItem = new MenuItem();
+        var viewContextMenu = new ViewContextMenu(this);
         menuItem.Header = viewContextMenu;
-
-        // Assign the context menu to the window
+        menuItem.Style = this.FindResource("NoHighlightMenuItem") as Style;
+        contextMenu.Items.Add(menuItem);
+        
         this.ContextMenu = contextMenu;
         
         //Timer
@@ -100,7 +101,7 @@ public partial class ChallengeView : Window
             BorderBrush = Brushes.Transparent,
             Background = Brushes.Transparent,
             Margin = new Thickness(10, 15, 0, 10),
-            Style = NoHoverStyle
+            Style = NoHoverStyleButton
         };
         var backImage = new Image
         {
@@ -112,7 +113,7 @@ public partial class ChallengeView : Window
         buttonStackpanel.Children.Add(backButton);
     }
 
-    private Style NoHoverStyle
+    private Style NoHoverStyleButton
     {
         get
         {
@@ -140,6 +141,31 @@ public partial class ChallengeView : Window
             return noHoverStyle;
         }
     }
+
+    // private Style NoHoverStyleMenuItem
+    // {
+    //     get
+    //     {
+    //         Style noHoverStyle = new Style { TargetType = typeof(MenuItem) };
+    //
+    //         noHoverStyle.Setters.Add(new Setter(MenuItem.TemplateProperty, new ControlTemplate(typeof(MenuItem))
+    //         {
+    //             VisualTree = new FrameworkElementFactory(typeof(ContentPresenter))
+    //             {
+    //                 Name = "MenuItemContent",
+    //                 Settdoesers =
+    //                 {
+    //                     new Setter(ContentPresenter.ContentProperty, new Binding { })
+    //                 }
+    //             }
+    //         }
+    //         // mouseOverTrigger.Setters.Add(backgroundSetter);
+    //         // mouseOverTrigger.Setters.Add(borderSetter);
+    //         // noHoverStyle.Triggers.Add(mouseOverTrigger);
+    //
+    //         return noHoverStyle;
+    //     }
+    // }
 
     private void UpdateChallengesOnTick(object? sender, EventArgs e)
     {

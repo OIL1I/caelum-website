@@ -9,6 +9,19 @@
     <Window.Resources>
         <BitmapImage x:Key="BackIcon" UriSource="../Resources/Back.png"></BitmapImage>
         <BitmapImage x:Key="MenuIcon" UriSource="../Resources/menu.png"></BitmapImage>
+        <BitmapImage x:Key="RefreshIcon" UriSource="../Resources/Reload.png"></BitmapImage>
+        <Style x:Key="NoHighlightMenuItem" TargetType="MenuItem">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type MenuItem}">
+                        <ContentPresenter
+                            ContentSource="Header"
+                            RecognizesAccessKey="True" />
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     
     <Grid x:Name="Grid1">
