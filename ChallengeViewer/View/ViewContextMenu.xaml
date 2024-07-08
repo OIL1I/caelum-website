@@ -10,7 +10,7 @@
         <StackPanel>
             <Button Name="BtnUpdate" Content="Update" Click="BtnUpdate_OnClick"/>
             <Label>Deckkraft:</Label>
-            <Slider Name="SliderOpacity" Minimum="0.0" Maximum="1.0" IsSnapToTickEnabled="True" 
+            <Slider Name="SliderOpacity" Minimum="0.0" Maximum="1.0" IsSnapToTickEnabled="True" TickFrequency="0.05" 
                     Value="0.3" ValueChanged="SliderOpacity_OnValueChanged"/>
         </StackPanel>
     </Grid>

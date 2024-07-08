@@ -5,18 +5,21 @@ namespace ChallengeViewer.View;
 
 public partial class ViewContextMenu : UserControl
 {
-    public ViewContextMenu()
+    private ChallengeView Parent;
+    
+    public ViewContextMenu(ChallengeView pParent)
     {
+        Parent = pParent;
         InitializeComponent();
     }
 
     private async void BtnUpdate_OnClick(object sender, RoutedEventArgs e)
     {
-        await ((ChallengeView)this.Parent).UpdateChallenges();
+        await Parent.UpdateChallenges();
     }
 
     private void SliderOpacity_OnValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
     {
-        ((ChallengeView)this.Parent).Opacity = e.NewValue;
+        Parent.UpdateWindowOpacity(e.NewValue);
     }
 }

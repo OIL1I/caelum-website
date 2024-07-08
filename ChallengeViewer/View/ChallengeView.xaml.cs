@@ -24,7 +24,22 @@ public partial class ChallengeView : Window
 
         //DragMove
         this.MouseLeftButtonDown += (_, _) => this.DragMove();
+        
+        //ContextMenu
+        // Create new context menu
+        var contextMenu = new ContextMenu();
 
+        // Create menu item to host the user control
+        var menuItem = new MenuItem();
+        contextMenu.Items.Add(menuItem);
+
+        // Create and assign the user control to the menu item
+        ViewContextMenu viewContextMenu = new ViewContextMenu(this);
+        menuItem.Header = viewContextMenu;
+
+        // Assign the context menu to the window
+        this.ContextMenu = contextMenu;
+        
         //Timer
         DispatcherTimer timer = new DispatcherTimer()
         {
@@ -66,7 +81,7 @@ public partial class ChallengeView : Window
         }
 
         //Buttons 
-        // Button Stackpanel
+        // Button Stackpane
         var buttonStackpanel = new StackPanel()
         {
             Orientation = Orientation.Horizontal,
@@ -136,7 +151,7 @@ public partial class ChallengeView : Window
         //TODO: Add Logic for "stoped sharing" Challenge
         _winchallenge =
             await new HttpClient().GetFromJsonAsync<Winchallenge>(
-                $"http://localhost:5149/API/GetChallenge/{this._winchallenge.ShareCode}");
+                $"https://oil1i-caelum.de/API/GetChallenge/{this._winchallenge.ShareCode}");
         if (_winchallenge != null)
         {
             int i = 2;
@@ -159,5 +174,10 @@ public partial class ChallengeView : Window
         {
             this.Close();
         }
+    }
+
+    public void UpdateWindowOpacity(double NewValue)
+    {
+        this.BackgroundBorder.Background.Opacity = NewValue is >= 0.0d and <= 1.0d ? NewValue : 0.3d;
     }
 }

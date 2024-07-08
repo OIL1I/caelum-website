@@ -8,21 +8,11 @@
         Title="ChallengeView" Height="300" ShowInTaskbar="False" Topmost="True" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
     <Window.Resources>
         <BitmapImage x:Key="BackIcon" UriSource="../Resources/Back.png"></BitmapImage>
-        <BitmapImage x:Key="ReloadIcon" UriSource="../Resources/Refresh.png"></BitmapImage>
+        <BitmapImage x:Key="MenuIcon" UriSource="../Resources/menu.png"></BitmapImage>
     </Window.Resources>
-    <Window.ContextMenu>
-        <ContextMenu>
-            <MenuItem Header="Options">
-                <MenuItem.Template>
-                    <ControlTemplate>
-                        <local:ViewContextMenu/>
-                    </ControlTemplate>
-                </MenuItem.Template>
-            </MenuItem>
-        </ContextMenu>
-    </Window.ContextMenu>
+    
     <Grid x:Name="Grid1">
-        <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="20" >
+        <Border x:Name="BackgroundBorder" BorderBrush="LightGray" BorderThickness="1" CornerRadius="20" >
             <Border.Background>
                 <SolidColorBrush Color="DimGray" Opacity="0.3"></SolidColorBrush>
             </Border.Background>

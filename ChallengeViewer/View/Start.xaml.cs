@@ -24,7 +24,7 @@ public partial class Start : Window
             //TODO: Change local url to prod url
             var winchlng =
                 await new HttpClient().GetFromJsonAsync<Winchallenge>(
-                    $"http://13.49.3.121/api/GetChallenge/{this.TxtboxSharecode.Text}");
+                    $"https://oil1i-caelum.de/api/GetChallenge/{this.TxtboxSharecode.Text}");
             // var winchlng = JsonSerializer.Deserialize<Winchallenge>(new FileStream("Test.json", FileMode.Open));
             if (winchlng != null)
             {
