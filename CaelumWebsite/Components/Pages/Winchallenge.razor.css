@@ -12,47 +12,11 @@ body {
     height: 100vh;
 }
 
-div {
-    margin: 1em;
-}
-
-label {
-    font-size: 1.2rem;
-    color: #000;
-    text-decoration: none;
-}
-
-a {
-    font-size: 1.2em;
-    color: #000;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #fff;
-}
-
-p {
-    font-size: 1.1em;
-    color: #000;
-}
-
-h3 {
-    font-size: 2em;
-    color: #000;
-    font-weight: bold;
-}
-
-.line-through {
-    text-decoration: line-through;
-}
-
-ul li a {
-    color: #000;
-    text-decoration: none;
-}
-
-ul li a:hover {
-    color: #fff;
+.challenge-container div {
+    align-self: center;
+    align-content: center;
+    background: #ffff;
+    border-radius: 10px;
+        padding: 20px;
+        margin: 20px;
 }

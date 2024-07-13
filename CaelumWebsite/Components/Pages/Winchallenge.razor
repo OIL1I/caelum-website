@@ -9,7 +9,7 @@
             <label>Alle Winchallenges:</label>
             @foreach (var wchlng in _winchallenges)
             {
-                <div>
+                <div class="challenge-container">
                     <a href="/winchallenge/@wchlng.Id">
                         <label>@wchlng.Name</label>
                         <label>@wchlng.Status.ToString()</label>
