@@ -12,4 +12,7 @@ public static class AppData
         if (_winchallenges == null) _winchallenges = new List<Components.Models.Winchallenge>();
         return _winchallenges;
     }
+
+    public static bool IsLoggedIn { get; set; } = false;
+    public static bool LastLoginFailed { get; set; } = false;
 }

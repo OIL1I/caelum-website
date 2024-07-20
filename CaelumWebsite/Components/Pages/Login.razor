@@ -1,0 +1,48 @@
+﻿@using System.ComponentModel.DataAnnotations
+@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
+
+<EditForm Model="loginModel" OnSubmit="Submit" FormName="LoginForm">
+    <label>Username:</label>
+    <InputText @bind-Value="loginModel.Username"/>
+    <label>Password:</label>
+    <InputText @bind-Value="loginModel.Password"/>
+    @if (AppData.LastLoginFailed)
+    {
+        <label style="color: red">Username or Password wrong</label>
+    }
+    <button type="submit">Login</button>
+</EditForm>
+
+@code {
+    private LoginModel? loginModel { get; set; }
+
+    public void Submit(EditContext context)
+    {
+        if (!context.Validate()) AppData.LastLoginFailed = true;
+        else
+        {
+            if (loginModel.Username.ToLower() == "admin" && loginModel.Password.ToLower() == "admin-pwd")
+            {
+                AppData.IsLoggedIn = true;
+                AppData.LastLoginFailed = false;
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                AppData.LastLoginFailed = true;
+            }
+        }
+    }
+
+    protected override void OnInitialized()
+    {
+        loginModel ??= new();
+    }
+
+    public class LoginModel
+    {
+        [Required] public string Username { get; set; } = "";
+        [Required] public string Password { get; set; } = "";
+    }
+}
