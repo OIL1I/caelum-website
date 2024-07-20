@@ -2,8 +2,11 @@
 @using System.Linq
 @using System.Linq.Expressions
 
+
 @if (_isOverwiev)
 {
+    <PageTitle>Winchallanges</PageTitle>
+    
     <div>
         <div>
             <label>Alle Winchallenges:</label>
@@ -25,6 +28,8 @@
 }
 else
 {
+    <PageTitle>@_winchlng.Name</PageTitle>
+    
     <div>
         <a href="/winchallenge">@("<- Zurück zu allen Challenges")</a>
         <a href="/winchallenge/@Id/edit">Challenge bearbeiten</a>

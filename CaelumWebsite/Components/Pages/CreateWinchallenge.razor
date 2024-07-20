@@ -2,6 +2,8 @@
 @inject NavigationManager NavigationManager
 @rendermode InteractiveServer
 
+<PageTitle>Create a Winchallange</PageTitle>
+
 <div class="overlay-container">
     <div class="form-container" style="padding-top: 20px; padding-bottom: 90px;">
         <form>
@@ -30,7 +32,7 @@
                             <input type="text" @bind="@chlng.Name"/>
                             <input class="form-check-input" type="checkbox" @bind="@chlng.IsBackToBack"/>
                             <label class="form-check-label">Back to Back</label>
-                            <Label>Required Copletions</Label>
+                            <label>Required Completions</label>
                             <input type="number" min="1" @bind="@chlng.RequiredCompletions"/>
                             <button type="button" @onclick="() => _Challenges.Remove(chlng)">Delete</button>
                         </li>
